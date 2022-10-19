@@ -509,7 +509,7 @@ address {
 .overlay-text {
   font-weight: 400;
   font-size: 18px;
-  line-height: 156%;
+  line-height: 1.56;
   letter-spacing: 0.03em;
 
   color: var(--light-bg-cl);
@@ -573,23 +573,22 @@ address {
 }
 .modal {
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
-
   min-width: 528px;
   min-height: 581px;
   background-color: var(--light-bg-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation);
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.3);
 }
-.modal-btn {
+.modal-btn-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -606,4 +605,35 @@ address {
   background-color: transparent;
   border: 1px solid #0000001a;
   cursor: pointer;
+}
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: var(--secondary-txt-color);
+}
+.form-element {
+  display: flex;
+  flex-direction: column;
+}
+.form-element label {
+  margin-bottom: 4px;
+}
+.form-element input {
+  height: 40px;
+  border: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.form-element textarea {
+  height: 120px;
+  border: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 15px;
 }
