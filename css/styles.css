@@ -682,9 +682,12 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
 }
 .modal-link {
   color: var(--accent-txt-cl);
+  padding-left: 4px;
 }
 .checkbox {
   width: 16px;
@@ -696,7 +699,7 @@ address {
   justify-content: center;
   margin-right: 9px;
 }
-.accept input:checked + .checkbox {
+.accept input:checked + label .checkbox {
   background: var(--accent-txt-cl);
   border: 2px solid var(--accent-txt-cl);
 }
