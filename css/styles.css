@@ -592,21 +592,23 @@ address {
   position: absolute;
   top: 8px;
   right: 8px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 30px;
   height: 30px;
   padding: 0;
-
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #0000001a;
   cursor: pointer;
+  transition: fill var(--animation);
+}
+.modal-btn-close:hover {
+  fill: var(--accent-txt-cl);
 }
 .modal-title {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -622,13 +624,36 @@ address {
 .form-element label {
   margin-bottom: 4px;
 }
+.input-wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  translate: 0 -50%;
+}
 .form-element input {
   height: 40px;
   border: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 10px;
-  padding-left: 15px;
+  padding-left: 42px;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: border var(--animation);
+}
+.form-element input:focus {
+  border: 1px solid var(--accent-txt-cl);
+  border-radius: 4px;
+}
+.form-element input + svg {
+  transition: fill var(--animation);
+}
+.form-element input:focus + svg {
+  fill: var(--accent-txt-cl);
 }
 .form-element textarea {
   height: 120px;
@@ -636,4 +661,56 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 15px;
+  resize: none;
+  cursor: pointer;
+  transition: border var(--animation);
+  margin-bottom: 9px;
+}
+.form-element textarea:focus {
+  border: 1px solid var(--accent-txt-cl);
+  border-radius: 4px;
+  outline: none;
+}
+.accept {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.modal-accept {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.modal-link {
+  color: var(--accent-txt-cl);
+}
+.checkbox {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--secondary-txt-color);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 9px;
+}
+.accept input:checked + .checkbox {
+  background: var(--accent-txt-cl);
+  border: 2px solid var(--accent-txt-cl);
+}
+.modal-btn-submit {
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 52px;
+  border: none;
+  line-height: 1.88;
+
+  color: var(--light-bg-cl);
+  cursor: pointer;
+  background-color: var(--accent-txt-cl);
 }
