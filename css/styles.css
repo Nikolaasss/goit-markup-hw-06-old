@@ -398,6 +398,9 @@ address {
   display: flex;
   align-items: baseline;
 }
+.foter-socials {
+  margin-right: 93px;
+}
 .foter-socials-link {
   display: flex;
   align-items: center;
@@ -417,10 +420,10 @@ address {
   color: var(--light-bg-cl);
   background-color: var(--accent-txt-cl);
 }
-.mailing-list {
+.mailing-list form {
   display: flex;
 }
-.mailing-item input {
+.mailing-list input {
   background: none;
   border: none;
   background-color: var(--dark-bg-cl);
@@ -431,8 +434,9 @@ address {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 16px;
+  margin-right: 12px;
 }
-.mailing-item input::placeholder {
+.mailing-list input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   display: flex;
@@ -447,14 +451,14 @@ address {
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  /*padding: 10px 52px;*/
-  border: none;
   line-height: 1.88;
   color: var(--light-bg-cl);
   cursor: pointer;
   background-color: var(--accent-txt-cl);
-  position: absolute;
   display: flex;
+}
+.mailing-icon {
+  margin-left: 10px;
 }
 /*Portfolio section*/
 .project-list-btn {
